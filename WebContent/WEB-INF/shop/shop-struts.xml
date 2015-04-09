@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="shop" namespace="/shop" extends="default">
+        <action name="show" class="shopAction" method="show">
+            <result name="success">/jsp/shop/shop.jsp</result>
+        </action>
+        <action name="clear" class="shopAction" method="clear">
+            <result name="success">/jsp/shop/shop.jsp</result>
+        </action>
+        <action name="save" class="shopAction" method="save">
+            <result name="success">/jsp/shop/shop.jsp</result>
+        </action>
+        <action name="edit" class="shopAction" method="edit">
+            <result name="success">/jsp/shop/shop.jsp</result>
+        </action>
+        <action name="remove" class="shopAction" method="remove">
+            <result name="success">/jsp/shop/shop.jsp</result>
+        </action>
+    </package>
+</struts>
+

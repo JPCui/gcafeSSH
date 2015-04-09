@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bean定义 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+    <!--Action定义 -->
+    <!-- 店面相关Action定义 -->
+    <bean name="ghsAction" scope="prototype"
+      class="cn.rakuchi.gcafe.ghs.action.GhsAction">
+        <property name="businessLogic" ref="ghsBLogic"/>
+    </bean>
+
+    <!-- 业务处理用BLogic -->
+    <bean name="ghsBLogic" scope="singleton"
+      class="cn.rakuchi.gcafe.ghs.bLogic.GhsBLogicImpl">
+        <property name="ghsDLogic" ref="ghsDLogic"/>
+    </bean>
+
+    <!-- 业务处理用DLogic -->
+    <bean name="ghsDLogic" scope="singleton"
+      class="cn.rakuchi.gcafe.ghs.dLogic.GhsDLogicImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+</beans>

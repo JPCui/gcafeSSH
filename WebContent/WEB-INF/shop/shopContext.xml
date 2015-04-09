@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bean定义 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+    <!--Action定义 -->
+    <!-- 店面相关Action定义 -->
+    <bean name="shopAction" scope="prototype"
+      class="cn.rakuchi.gcafe.shop.action.ShopAction">
+        <property name="businessLogic" ref="shopBLogic"/>
+    </bean>
+
+    <!-- 业务处理用BLogic -->
+    <bean name="shopBLogic" scope="singleton"
+      class="cn.rakuchi.gcafe.shop.bLogic.ShopBLogicImpl">
+        <property name="shopDLogic" ref="shopDLogic"/>
+    </bean>
+
+    <!-- 业务处理用DLogic -->
+    <bean name="shopDLogic" scope="singleton"
+      class="cn.rakuchi.gcafe.shop.dLogic.ShopDLogicImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+</beans>

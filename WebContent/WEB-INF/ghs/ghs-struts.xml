@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="ghs" namespace="/ghs" extends="default">
+        <action name="show" class="ghsAction" method="show">
+            <result name="success">/jsp/ghs/ghs.jsp</result>
+        </action>
+        <action name="clear" class="ghsAction" method="clear">
+            <result name="success">/jsp/ghs/ghs.jsp</result>
+        </action>
+        <action name="save" class="ghsAction" method="save">
+            <result name="success">/jsp/ghs/ghs.jsp</result>
+        </action>
+        <action name="edit" class="ghsAction" method="edit">
+            <result name="success">/jsp/ghs/ghs.jsp</result>
+        </action>
+        <action name="updateValidFlag" class="ghsAction" method="updateValidFlag">
+            <result type="redirectAction" name="success">
+            	<param name="actionName">show</param>
+            </result>
+        </action>
+        <action name="remove" class="ghsAction" method="remove">
+            <result name="success">/jsp/ghs/ghs.jsp</result>
+        </action>
+    </package>
+</struts>
+

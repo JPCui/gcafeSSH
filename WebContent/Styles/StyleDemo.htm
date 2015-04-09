@@ -1,0 +1,1035 @@
+﻿<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rakuchi Style</title>
+    <link href="./rkc.css" rel="stylesheet" type="text/css" />
+
+    <script src="../Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../Scripts/rkc.table.fixheader-1.0.0.js" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript">
+    $(function(){
+        // 顶部导航
+        $("li[class='dropdown']", $(".top-nav")).click(function(){
+            $(".dropdown", $(this)).removeClass("open");
+            $(this).toggleClass("open");
+            return false;
+        });
+        $("li[class!='dropdown']", $(".top-nav")).click(function(){
+            $(".dropdown", $(".top-nav")).removeClass("open");
+
+            $("li", $(".top-nav")).removeClass("active");
+            $(this).addClass("active");
+
+            return false;
+        });
+        $(document.body).click(function(){
+            $(".dropdown", $(".top-nav")).removeClass("open");
+        });
+
+
+        // 侧导航
+        $("li[class='slidedown']", $(".side-nav")).click(function(){
+            $(".slidedown", $(this)).removeClass("open");
+            $(this).toggleClass("open");
+            return false;
+        });
+        $("li[class!='slidedown']", $(".side-nav")).click(function(){
+
+            $("li", $(".side-nav")).removeClass("active");
+            $(this).addClass("active");
+
+            return false;
+        });
+
+        fixTableHeader("tblFixedHeaderDemo",3);
+    });
+    </script>
+
+</head>
+<body>
+    <h1>
+        <strong>Rakuchi Soft CSS</strong></h1>
+    <hr />
+    <div class="row w-960">
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    HTML &lt;h1-6&gt; 标签
+                </div>
+                <div class="panel-body">
+                    <h1>
+                        Heading 1</h1>
+                    <h2>
+                        Heading 2</h2>
+                    <h3>
+                        Heading 3</h3>
+                    <h4>
+                        Heading 4</h4>
+                    <h5>
+                        Heading 5</h5>
+                    <h6>
+                        Heading 6</h6>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">h1</span><span class="tag">&gt;</span><span
+                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">h1</span><span
+                            class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">h2</span><span
+                                class="tag">&gt;</span><span class="txt">…</span><span class="tag">&lt;/</span><span
+                                    class="title">h2</span><span class="tag">&gt;</span></code> <code><span class="tag">
+                                        &lt;</span><span class="title">h3</span><span class="tag">&gt;</span><span class="txt">…</span><span
+                                            class="tag">&lt;/</span><span class="title">h3</span><span class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">h4</span><span class="tag">&gt;</span><span
+                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">h4</span><span
+                            class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">h5</span><span
+                                class="tag">&gt;</span><span class="txt">…</span><span class="tag">&lt;/</span><span
+                                    class="title">h5</span><span class="tag">&gt;</span></code> <code><span class="tag">
+                                        &lt;</span><span class="title">h6</span><span class="tag">&gt;</span><span class="txt">…</span><span
+                                            class="tag">&lt;/</span><span class="title">h6</span><span class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    HTML &lt;p&gt; 标签
+                </div>
+                <div class="panel-body">
+                    <p>
+                        p 元素会自动在其前后创建一些空白。浏览器会自动添加这些空间，您也可以在样式表中规定。</p>
+                    <p>
+                        attr 元素表示一个缩写形式，比如 "Inc."、"etc."。通过对缩写词语进行标记，您就能够为浏览器、拼写检查程序、翻译系统以及搜索引擎分度器提供有用的信息。如：
+                        <abbr title="attribute">
+                            attr</abbr></p>
+                    <p class="text-gray">
+                        详细介绍参见 <a href="http://www.w3school.com.cn/">w3school</a></p>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">p</span><span class="tag">&gt;</span><span
+                        class="txt">...</span><span class="tag">&lt;/</span><span class="title">p</span><span
+                            class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    HTML &lt;blockquote&gt; 标签
+                </div>
+                <div class="panel-body">
+                    <div style="width: 500px;">
+                        <blockquote>
+                            <p>
+                                &lt;blockquote&gt; 与 &lt;/blockquote&gt; 之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进（增加外边距），而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。</p>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">blockquote</span><span class="tag">&gt;</span><span
+                        class="txt">...</span><span class="tag">&lt;/</span><span class="title">blockquote</span><span
+                            class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    TEXT
+                </div>
+                <div class="panel-body">
+                    <p class="">
+                        No class.</p>
+                    <p class="text-muted">
+                        Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+                    <p class="text-primary">
+                        Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p class="text-success">
+                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                    <p class="text-info">
+                        Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                    <p class="text-warning">
+                        Etiam porta sem malesuada magna mollis euismod.</p>
+                    <p class="text-error">
+                        Donec ullamcorper nulla non metus auctor fringilla.</p>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">p</span><span class="tag">&gt;</span><span
+                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">p</span><span
+                            class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">p</span><span
+                                class="attr"> class</span><span class="val">="text-muted"</span><span class="tag">&gt;</span><span
+                                    class="txt">…</span><span class="tag">&lt;/</span><span class="title">p</span><span
+                                        class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">p</span><span
+                                            class="attr"> class</span><span class="val">="text-primary"</span><span class="tag">&gt;</span><span
+                                                class="txt">…</span><span class="tag">&lt;/</span><span class="title">p</span><span
+                                                    class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">p</span><span
+                                                        class="attr"> class</span><span class="val">="text-success"</span><span class="tag">&gt;</span><span
+                                                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">p</span><span
+                                                                class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">p</span><span
+                                                                    class="attr"> class</span><span class="val">="text-info"</span><span class="tag">&gt;</span><span
+                                                                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">p</span><span
+                                                                            class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">p</span><span class="attr"> class</span><span
+                        class="val">="text-warning"</span><span class="tag">&gt;</span><span class="txt">…</span><span
+                            class="tag">&lt;/</span><span class="title">p</span><span class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">p</span><span class="attr"> class</span><span
+                        class="val">="text-error"</span><span class="tag">&gt;</span><span class="txt">…</span><span
+                            class="tag">&lt;/</span><span class="title">p</span><span class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-begin">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    PANEL
+                </div>
+                <div class="panel-body">
+                    <p>
+                        Panel default</p>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Panel heading
+                        </div>
+                        <div class="panel-body">
+                            Panel body</div>
+                        <div class="panel-footer">
+                            Panel footer
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">div</span><span class="attr">
+                        class</span><span class="val">="panel panel-default"</span><span class="tag">&gt;</span>
+                        <code><span class="tag">&lt;</span><span class="title">div</span><span class="attr">
+                            class</span><span class="val">="panel-heading"</span><span class="tag">&gt;</span>
+                            <code><span class="txt">...</span> </code></code><code><span class="tag">&lt;/</span><span
+                                class="title">div</span> <span class="tag">&gt;</span> </code><code><span class="tag">
+                                    &lt;</span><span class="title">div</span><span class="attr"> class</span><span class="val">="panel-body"</span><span
+                                        class="tag">&gt;</span> <code><span class="txt">...</span> </code>
+                        </code><code><span class="tag">&lt;/</span><span class="title">div</span> <span class="tag">
+                            &gt;</span> </code><code><span class="tag">&lt;</span><span class="title">div</span><span
+                                class="attr"> class</span><span class="val">="panel-footer"</span><span class="tag">&gt;</span>
+                                <code><span class="txt">...</span> </code></code><code><span class="tag">&lt;/</span><span
+                                    class="title">div</span> <span class="tag">&gt;</span> </code></code>
+                    <code><span class="tag">&lt;/</span><span class="title">div</span> <span class="tag">
+                        &gt;</span> </code>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-end">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    PANEL
+                </div>
+                <div class="panel-body">
+                    <p>
+                        Panel primary</p>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Panel heading
+                        </div>
+                        <div class="panel-body">
+                            Panel body</div>
+                    </div>
+                    <p>
+                        Panel success</p>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Panel heading
+                        </div>
+                        <div class="panel-body">
+                            Panel body</div>
+                    </div>
+                    <p>
+                        Panel info</p>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Panel heading
+                        </div>
+                        <div class="panel-body">
+                            Panel body</div>
+                    </div>
+                    <p>
+                        Panel warning</p>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            Panel heading
+                        </div>
+                        <div class="panel-body">
+                            Panel body</div>
+                    </div>
+                    <p>
+                        Panel error</p>
+                    <div class="panel panel-error">
+                        <div class="panel-heading">
+                            Panel heading
+                        </div>
+                        <div class="panel-body">
+                            Panel body</div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">div</span><span class="attr">
+                        class</span><span class="val">="panel panel-primary"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">div</span><span
+                                class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">div</span><span
+                                    class="attr"> class</span><span class="val">="panel panel-success"</span><span class="tag">&gt;</span><span
+                                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">div</span><span
+                                            class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">div</span><span
+                                                class="attr"> class</span><span class="val">="panel panel-info"</span><span class="tag">&gt;</span><span
+                                                    class="txt">…</span><span class="tag">&lt;/</span><span class="title">div</span><span
+                                                        class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">div</span><span
+                                                            class="attr"> class</span><span class="val">="panel panel-warning"</span><span class="tag">&gt;</span><span
+                                                                class="txt">…</span><span class="tag">&lt;/</span><span class="title">div</span><span
+                                                                    class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">div</span><span
+                                                                        class="attr"> class</span><span class="val">="panel panel-error"</span><span class="tag">&gt;</span><span
+                                                                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">div</span><span
+                                                                                class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    WELL</div>
+                <div class="panel-body">
+                    <div class="well">
+                        Well
+                    </div>
+                    <div class="well well-sm">
+                        Small Well
+                    </div>
+                    <div class="well well-lg">
+                        Large Well
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">div</span><span class="attr">
+                        class</span><span class="val">="well"</span><span class="tag">&gt;</span><span class="txt">...</span><span
+                            class="tag">&lt;/</span><span class="title">div</span> <span class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">div</span><span class="attr">
+                        class</span><span class="val">="well well-sm"</span><span class="tag">&gt;</span><span
+                            class="txt">...</span><span class="tag">&lt;/</span><span class="title">div</span>
+                        <span class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">div</span><span
+                            class="attr"> class</span><span class="val">="well well-lg"</span><span class="tag">&gt;</span><span
+                                class="txt">...</span><span class="tag">&lt;/</span><span class="title">div</span>
+                            <span class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-begin">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    LIST GROUP</div>
+                <div class="panel-body">
+                    <p>
+                        ul > li</p>
+                    <ul class="list-group">
+                        <li class="list-group-item">li .list-group-item</li>
+                        <li class="list-group-item active">li .list-group-item .active</li>
+                        <li class="list-group-item">li .list-group-item</li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">ul</span><span class="attr">
+                        class</span><span class="val">="list-group"</span><span class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">li</span><span class="attr">
+                        class</span><span class="val">="list-group-item"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">li</span><span
+                                class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">li</span><span
+                                    class="attr"> class</span><span class="val">="list-group-item active"</span><span
+                                        class="tag">&gt;</span><span class="txt">…</span><span class="tag">&lt;/</span><span
+                                            class="title">li</span><span class="tag">&gt;</span></code>
+                    <code><span class="txt">…</span></code> <code><span class="tag">&lt;/</span><span
+                        class="title">ul</span><span class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-end">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    LIST GROUP</div>
+                <div class="panel-body">
+                    <p>
+                        div > a</p>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">a .list-group-item .active</a> <a href="#"
+                            class="list-group-item">a .list-group-item</a> <a href="#" class="list-group-item">a
+                                .list-group-item</a>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">div</span><span class="attr">
+                        class</span><span class="val">="list-group"</span><span class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">a</span><span class="attr"> class</span><span
+                        class="val">="list-group-item active"</span><span class="tag">&gt;</span><span class="txt">…</span><span
+                            class="tag">&lt;/</span><span class="title">a</span><span class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">a</span><span class="attr"> class</span><span
+                        class="val">="list-group-item"</span><span class="tag">&gt;</span><span class="txt">…</span><span
+                            class="tag">&lt;/</span><span class="title">a</span><span class="tag">&gt;</span></code>
+                    <code><span class="txt">…</span></code> <code><span class="tag">&lt;/</span><span
+                        class="title">div</span><span class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    LABEL</div>
+                <div class="panel-body">
+                    <span class="label label-default">default</span> <span class="label label-primary">primary</span>
+                    <span class="label label-success">success</span> <span class="label label-info">info</span>
+                    <span class="label label-warning">warning</span> <span class="label label-error">error</span>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">span</span><span class="attr">
+                        class</span><span class="val">="label label-default"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">span</span><span
+                                class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">span</span><span
+                                    class="attr"> class</span><span class="val">="label label-primary"</span><span class="tag">&gt;</span><span
+                                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">span</span><span
+                                            class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">span</span><span
+                                                class="attr"> class</span><span class="val">="label label-success"</span><span class="tag">&gt;</span><span
+                                                    class="txt">…</span><span class="tag">&lt;/</span><span class="title">span</span><span
+                                                        class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">span</span><span
+                                                            class="attr"> class</span><span class="val">="label label-info"</span><span class="tag">&gt;</span><span
+                                                                class="txt">…</span><span class="tag">&lt;/</span><span class="title">span</span><span
+                                                                    class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">span</span><span
+                                                                        class="attr"> class</span><span class="val">="label label-warning"</span><span class="tag">&gt;</span><span
+                                                                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">span</span><span
+                                                                                class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">span</span><span class="attr">
+                        class</span><span class="val">="label label-error"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">span</span><span
+                                class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-begin">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    MENU</div>
+                <div class="panel-body">
+                    <ul class="top-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li class="disabled"><a href="#">Disabled</a></li>
+                        <li class="dropdown"><a>Dropdown<span class="dropdown-arror"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li class="disabled"><a href="#">Another action</a></li>
+                                <li class="dropdown"><a href="#">Something else here<span class="dropdown-arror"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li class="disabled"><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-end">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    MENU</div>
+                <div class="panel-body">
+                    <ul class="side-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li class="disabled"><a href="#">Disabled</a></li>
+                        <li class="slidedown"><a>Dropdown<span class="slidedown-arror"></span></a>
+                            <ul class="slidedown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li class="disabled"><a href="#">Another action</a></li>
+                                <li class="slidedown"><a href="#">Something else here<span class="slidedown-arror"></span></a>
+                                    <ul class="slidedown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li class="disabled"><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    BUTTON</div>
+                <div class="panel-body">
+                    <input type="button" value="btn btn-default" class="btn btn-default" />
+                    <input type="button" value="btn btn-primary" class="btn btn-primary" />
+                    <input type="button" value="btn btn-success" class="btn btn-success" />
+                    <input type="button" value="btn btn-info" class="btn btn-info" />
+                    <input type="button" value="btn btn-warning" class="btn btn-warning" />
+                    <input type="button" value="btn btn-error" class="btn btn-error" />
+                    <input type="button" value="btn btn-link" class="btn btn-link" />
+                    <br />
+                    <br />
+                    <input type="button" value="btn btn-primary btn-lg" class="btn btn-primary btn-lg" />
+                    <input type="button" value="btn btn-primary btn-sm" class="btn btn-primary btn-sm" />
+                    <input type="button" value="btn btn-primary btn-xs" class="btn btn-primary btn-xs" />
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">input</span><span class="attr">
+                        class</span><span class="val">="btn btn-default"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                    class="attr"> class</span><span class="val">="btn btn-primary"</span><span class="tag">&gt;</span><span
+                                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                            class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                                class="attr"> class</span><span class="val">="btn btn-success"</span><span class="tag">&gt;</span><span
+                                                    class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                                        class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                                            class="attr"> class</span><span class="val">="btn btn-info"</span><span class="tag">&gt;</span><span
+                                                                class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                                                    class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                                                        class="attr"> class</span><span class="val">="btn btn-warning"</span><span class="tag">&gt;</span><span
+                                                                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                                                                class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">input</span><span class="attr">
+                        class</span><span class="val">="btn btn-error"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                    class="attr"> class</span><span class="val">="btn btn-link"</span><span class="tag">&gt;</span><span
+                                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                            class="tag">&gt;</span></code>
+                    <br />
+                    <code><span class="tag">&lt;</span><span class="title">input</span><span class="attr">
+                        class</span><span class="val">="btn btn-primary btn-lg"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                    class="attr"> class</span><span class="val">="btn btn-primary btn-sm"</span><span
+                                        class="tag">&gt;</span><span class="txt">…</span><span class="tag">&lt;/</span><span
+                                            class="title">input</span><span class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">input</span><span class="attr">
+                        class</span><span class="val">="btn btn-primary btn-xs"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-begin">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    TEXT</div>
+                <div class="panel-body">
+                    <input type="text" value="" placeholder="form-control default" class="form-control default" />
+                    <br />
+                    <input type="text" value="" placeholder="form-control primary" class="form-control primary" />
+                    <br />
+                    <input type="text" value="" placeholder="form-control success" class="form-control success" />
+                    <br />
+                    <input type="text" value="" placeholder="form-control info" class="form-control info" />
+                    <br />
+                    <input type="text" value="" placeholder="form-control warning" class="form-control warning" />
+                    <br />
+                    <input type="text" value="" placeholder="form-control error" class="form-control error" />
+                    <br />
+                    <div class="input-group">
+                        <div>
+                            <div class="input-group-addon">
+                                <span style="">$</span></div>
+                            <div>
+                                <input type="text" class="form-control primary" /></div>
+                            <div class="input-group-btn">
+                                <input type="button" value="选择" class="btn btn-default" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">input</span><span class="attr">
+                        class</span><span class="val">="form-control default"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                    class="attr"> class</span><span class="val">="form-control primary"</span><span class="tag">&gt;</span><span
+                                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                            class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                                class="attr"> class</span><span class="val">="form-control success"</span><span class="tag">&gt;</span><span
+                                                    class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                                        class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                                            class="attr"> class</span><span class="val">="form-control info"</span><span class="tag">&gt;</span><span
+                                                                class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                                                    class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                                                        class="attr"> class</span><span class="val">="form-control warning"</span><span class="tag">&gt;</span><span
+                                                                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                                                                class="tag">&gt;</span></code>
+                    <code><span class="tag">&lt;</span><span class="title">input</span><span class="attr">
+                        class</span><span class="val">="form-control error"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">input</span><span
+                                class="tag">&gt;</span></code>
+                    <br />
+                    <code><span class="tag">&lt;</span><span class="title">div</span><span class="attr">
+                        class</span><span class="val">="input-group"</span><span class="tag">&gt;</span>
+                        <code><span class="tag">&lt;</span><span class="title">div</span><span class="tag">&gt;</span>
+                            <code><span class="tag">&lt;</span><span class="title">div</span><span class="attr">
+                                class</span><span class="val">="input-group-addon"</span><span class="tag">&gt;</span>
+                                <code><span class="tag">&lt;</span><span class="title">span</span><span class="tag">&gt;</span><span
+                                    class="txt">…</span><span class="tag">&lt;/</span><span class="title">span</span><span
+                                        class="tag">&gt;</span></code></code> <code><span class="tag">&lt;/</span><span class="title">div</span><span
+                                            class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">div</span><span
+                                                class="tag">&gt;</span> <code><span class="tag">&lt;</span><span class="title">input</span><span
+                                                    class="attr"> type</span><span class="val">="text"</span><span class="attr"> class</span><span
+                                                        class="val">="form-control primary"</span><span class="tag"> /&gt;</span></code></code>
+                            <code><span class="tag">&lt;/</span><span class="title">div</span><span class="tag">&gt;</span></code>
+                            <code><span class="tag">&lt;</span><span class="title">div</span><span class="attr">
+                                class</span><span class="val">="input-group-btn"</span><span class="tag">&gt;</span>
+                                <code><span class="tag">&lt;</span><span class="title">input</span><span class="attr">
+                                    type</span><span class="val">="button"</span><span class="attr"> class</span><span
+                                        class="val">="btn btn-default"</span><span class="tag"> /&gt;</span></code></code>
+                            <code><span class="tag">&lt;/</span><span class="title">div</span><span class="tag">&gt;</span></code></code>
+                        <code><span class="tag">&lt;/</span><span class="title">div</span><span class="tag">&gt;</span></code></code>
+                    <code><span class="tag">&lt;/</span><span class="title">div</span><span class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-end">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    TEXT</div>
+                <div class="panel-body">
+                    <textarea rows="5" class="form-control primary"></textarea>
+                    <br />
+                    <select class="form-control primary">
+                        <option>aaa</option>
+                        <option>bbb</option>
+                        <option>ccc</option>
+                        <option>eee</option>
+                        <option>fff</option>
+                        <option>ggg</option>
+                    </select>
+                    <br />
+                    <select multiple="multiple" class="form-control primary">
+                        <option>aaa</option>
+                        <option>bbb</option>
+                        <option>ccc</option>
+                        <option>ddd</option>
+                        <option>eee</option>
+                        <option>fff</option>
+                        <option>ggg</option>
+                    </select>
+                    <br />
+                    <input type="checkbox" /><input type="radio" />
+                </div>
+                <div class="panel-footer">
+                    <code><span class="tag">&lt;</span><span class="title">textarea</span><span class="attr">
+                        class</span><span class="val">="form-control primary"</span><span class="tag">&gt;</span><span
+                            class="txt">…</span><span class="tag">&lt;/</span><span class="title">textarea</span><span
+                                class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">select</span><span
+                                    class="attr"> class</span><span class="val">="form-control primary"</span><span class="tag">&gt;</span><span
+                                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">select</span><span
+                                            class="tag">&gt;</span></code> <code><span class="tag">&lt;</span><span class="title">select</span><span
+                                                class="attr"> multiple</span><span class="val">="multiple"</span><span class="attr">
+                                                    class</span><span class="val">="form-control primary"</span><span class="tag">&gt;</span><span
+                                                        class="txt">…</span><span class="tag">&lt;/</span><span class="title">select</span><span
+                                                            class="tag">&gt;</span></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-7 col-begin">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    TABLE</div>
+                <div class="panel-body">
+                    <table type="detail">
+                        <tr>
+                            <td class="info align-right">
+                                商品代码
+                            </td>
+                            <td class="item">
+                                <input type="text" value="" class="form-control primary" />
+                            </td>
+                            <td class="info align-right">
+                                商品名称
+                            </td>
+                            <td class="item">
+                                <input type="text" value="" class="form-control primary" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="info align-right">
+                                单价
+                            </td>
+                            <td class="item">
+                                <input type="text" value="" class="form-control primary" />
+                            </td>
+                            <td class="info align-right">
+                                数量
+                            </td>
+                            <td class="item">
+                                <input type="text" value="" class="form-control primary" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-5 col-end">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    TABLE</div>
+                <div class="panel-body">
+                    <table type="grid">
+                        <tr class="head">
+                            <td class="align-center">
+                                商品代码
+                            </td>
+                            <td class="align-center">
+                                商品名称
+                            </td>
+                            <td class="align-center">
+                                单价
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                G001
+                            </td>
+                            <td class="align-center">
+                                小熊
+                            </td>
+                            <td class="align-right">
+                                45.79
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                G002
+                            </td>
+                            <td class="align-center">
+                                小鸡
+                            </td>
+                            <td class="align-right">
+                                59.23
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                G003
+                            </td>
+                            <td class="align-center">
+                                小猪
+                            </td>
+                            <td class="align-right">
+                                100.24
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    TABLE</div>
+                <div class="panel-body" style="overflow:auto; height:200px;">
+                    <table id="tblFixedHeaderDemo" type="grid">
+                        <tr class="head">
+                            <td class="align-center">
+                                商品代码
+                            </td>
+                            <td class="align-center">
+                                商品名称
+                            </td>
+                            <td class="align-center">
+                                单价
+                            </td>
+                            <td class="align-center">
+                                C1
+                            </td>
+                            <td class="align-center">
+                                C2
+                            </td>
+                            <td class="align-center">
+                                C3
+                            </td>
+                            <td class="align-center">
+                                C4
+                            </td>
+                            <td class="align-center">
+                                C5
+                            </td>
+                             <td class="align-center">
+                                C1
+                            </td>
+                            <td class="align-center">
+                                C2
+                            </td>
+                            <td class="align-center">
+                                C3
+                            </td>
+                            <td class="align-center">
+                                C4
+                            </td>
+                            <td class="align-center">
+                                C5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                G001
+                            </td>
+                            <td class="align-center">
+                                小熊
+                            </td>
+                            <td class="align-right">
+                                45.79
+                            </td>
+                            <td class="align-center">
+                                R1C1
+                            </td>
+                            <td class="align-center">
+                                R1C2
+                            </td>
+                            <td class="align-center">
+                                R1C3
+                            </td>
+                            <td class="align-center">
+                                R1C4
+                            </td>
+                            <td class="align-center">
+                                R1C5
+                            </td>
+                            <td class="align-center">
+                                R1C1
+                            </td>
+                            <td class="align-center">
+                                R1C2
+                            </td>
+                            <td class="align-center">
+                                R1C3
+                            </td>
+                            <td class="align-center">
+                                R1C4
+                            </td>
+                            <td class="align-center">
+                                R1C5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                G002
+                            </td>
+                            <td class="align-center">
+                                小鸡
+                            </td>
+                            <td class="align-right">
+                                59.23
+                            </td>
+                            <td class="align-center">
+                                R2C1
+                            </td>
+                            <td class="align-center">
+                                R2C2
+                            </td>
+                            <td class="align-center">
+                                R2C3
+                            </td>
+                            <td class="align-center">
+                                R2C4
+                            </td>
+                            <td class="align-center">
+                                R2C5
+                            </td>
+                            <td class="align-center">
+                                R1C1
+                            </td>
+                            <td class="align-center">
+                                R1C2
+                            </td>
+                            <td class="align-center">
+                                R1C3
+                            </td>
+                            <td class="align-center">
+                                R1C4
+                            </td>
+                            <td class="align-center">
+                                R1C5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                G003
+                            </td>
+                            <td class="align-center">
+                                小猪
+                            </td>
+                            <td class="align-right">
+                                100.24
+                            </td>
+                            <td class="align-center">
+                                R3C1
+                            </td>
+                            <td class="align-center">
+                                R3C2
+                            </td>
+                            <td class="align-center">
+                                R3C3
+                            </td>
+                            <td class="align-center">
+                                R3C4
+                            </td>
+                            <td class="align-center">
+                                R3C5
+                            </td>
+                            <td class="align-center">
+                                R1C1
+                            </td>
+                            <td class="align-center">
+                                R1C2
+                            </td>
+                            <td class="align-center">
+                                R1C3
+                            </td>
+                            <td class="align-center">
+                                R1C4
+                            </td>
+                            <td class="align-center">
+                                R1C5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                G003
+                            </td>
+                            <td class="align-center">
+                                小猪
+                            </td>
+                            <td class="align-right">
+                                100.24
+                            </td>
+                            <td class="align-center">
+                                R3C1
+                            </td>
+                            <td class="align-center">
+                                R3C2
+                            </td>
+                            <td class="align-center">
+                                R3C3
+                            </td>
+                            <td class="align-center">
+                                R3C4
+                            </td>
+                            <td class="align-center">
+                                R3C5
+                            </td>
+                            <td class="align-center">
+                                R1C1
+                            </td>
+                            <td class="align-center">
+                                R1C2
+                            </td>
+                            <td class="align-center">
+                                R1C3
+                            </td>
+                            <td class="align-center">
+                                R1C4
+                            </td>
+                            <td class="align-center">
+                                R1C5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                G003
+                            </td>
+                            <td class="align-center">
+                                小猪
+                            </td>
+                            <td class="align-right">
+                                100.24
+                            </td>
+                            <td class="align-center">
+                                R3C1
+                            </td>
+                            <td class="align-center">
+                                R3C2
+                            </td>
+                            <td class="align-center">
+                                R3C3
+                            </td>
+                            <td class="align-center">
+                                R3C4
+                            </td>
+                            <td class="align-center">
+                                R3C5
+                            </td>
+                            <td class="align-center">
+                                R1C1
+                            </td>
+                            <td class="align-center">
+                                R1C2
+                            </td>
+                            <td class="align-center">
+                                R1C3
+                            </td>
+                            <td class="align-center">
+                                R1C4
+                            </td>
+                            <td class="align-center">
+                                R1C5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                G003
+                            </td>
+                            <td class="align-center">
+                                小猪
+                            </td>
+                            <td class="align-right">
+                                100.24
+                            </td>
+                            <td class="align-center">
+                                R3C1
+                            </td>
+                            <td class="align-center">
+                                R3C2
+                            </td>
+                            <td class="align-center">
+                                R3C3
+                            </td>
+                            <td class="align-center">
+                                R3C4
+                            </td>
+                            <td class="align-center">
+                                R3C5
+                            </td>
+                            <td class="align-center">
+                                R1C1
+                            </td>
+                            <td class="align-center">
+                                R1C2
+                            </td>
+                            <td class="align-center">
+                                R1C3
+                            </td>
+                            <td class="align-center">
+                                R1C4
+                            </td>
+                            <td class="align-center">
+                                R1C5
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

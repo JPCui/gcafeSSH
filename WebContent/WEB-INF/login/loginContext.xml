@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bean定义 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+    <!--Action定义 -->
+    <!-- 验证码 显示-->
+<!--     <bean name="login_rand" scope="singleton"
+      class="cn.rakuchi.project.login.RandomAction" /> -->
+
+    <!-- 登陆用Action定义 -->
+    <bean name="loginAction" scope="prototype"
+      class="cn.rakuchi.gcafe.login.action.LoginAction">
+        <property name="businessLogic" ref="loginBLogic"/>
+    </bean>
+
+    <!-- 登录菜单用Action定义 -->
+    <bean name="menuHandlerAction" scope="prototype"
+      class="cn.rakuchi.gcafe.login.action.MenuHandlerAction" />
+
+    <!-- 登陆业务处理用BLogic -->
+    <bean name="loginBLogic" scope="singleton"
+      class="cn.rakuchi.gcafe.login.bLogic.LoginBLogicImpl">
+        <property name="loginDLogic" ref="loginDLogic"/>
+    </bean>
+
+    <!-- 登陆业务处理用DLogic -->
+    <bean name="loginDLogic" scope="singleton"
+      class="cn.rakuchi.gcafe.login.dLogic.LoginDLogicImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+</beans>
